@@ -13,9 +13,9 @@ export class ContentComponent {
     { image: '/assets/images/slide/slide1.webp', showContent: false, link: '#' }
   ];
   banner = [
-    { image: '/assets/images/banner/1.jpg' },
-    { image: '/assets/images/banner/2.jpg' },
-    { image: '/assets/images/banner/3.jpg' }
+    { image: '/assets/images/banner/1.webp' },
+    { image: '/assets/images/banner/2.webp' },
+    { image: '/assets/images/banner/3.webp' }
   ];
 
   currentIndex = 0;
