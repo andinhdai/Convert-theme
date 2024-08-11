@@ -6,11 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./content.component.css']
 })
 
-export class ContentComponent {
+export class ContentComponent  {
   slides = [
-    { image: '/assets/images/slide/bg.png', showContent: true, link: '#' },
-    { image: '/assets/images/slide/bg.png', showContent: false, link: '#' },
-    { image: '/assets/images/slide/slide1.webp', showContent: false, link: '#' }
+    { image: '/assets/images/slide/bg.webp', showContent: true},
+    { image: '/assets/images/slide/bg.webp', showContent: false},
+    { image: '/assets/images/slide/slide1.webp', showContent: false}
   ];
   banner = [
     { image: '/assets/images/banner/1.webp' },

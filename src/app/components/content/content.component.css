@@ -6,3 +6,7 @@
 .star{
     @apply hover:cursor-pointer;
 }
+.slide-container {
+    @apply w-full bg-contain bg-no-repeat bg-center relative;
+  }
+  
