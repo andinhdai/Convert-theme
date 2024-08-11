@@ -3,4 +3,6 @@
      hover:text-black  bg-gray-400 opacity-90 text-white p-2;   
 }
 
-  
+.star{
+    @apply hover:cursor-pointer;
+}
