@@ -1,44 +1,49 @@
 <div class="bg-slate-200 pb-10">
   <div class="w-[95%] lg:w-[80%] mx-auto">
-    <div class="relative overflow-hidden  pt-4">
-      <div class="rounded-lg flex transition-transform duration-500"
-        [style.transform]="'translateX(-' + (currentIndex * 100) + '%)' ">
-        <div *ngFor="let slide of slides; let i = index"
-          class="w-full flex-shrink-0 relative bg-cover bg-no-repeat bg-center h-[410px] rounded-lg"
-          [ngStyle]="{'background-image': 'url(' + slide.image + ')'}">
-          <div *ngIf="slide.showContent"
-            class="absolute inset-0 flex items-center justify-start bg-opacity-50 text-white pl-[15%]">
-            <div class="text-left">
-              <p class="text-[4px] sm:text-[6px] md:text-[8px] lg:text-[13px] text-yellow-300 font-bold mb-5">GAME
-                PADCONSOLE</p>
-              <p class="text-sm sm:text-lg md:text-xl lg:text-2xl font-bold">Today's Offer</p>
-              <p class="text-sm sm:text-lg md:text-xl lg:text-2xl font-bold mb-4">Skin <span
-                  class="text-green-400">Gamepad</span> 2022</p>
-              <a href="#"
-                class="bg-white text-slate-800 font-medium px-4 py-2 rounded-3xl hover:opacity-80 text-sm sm:text-lg md:text-xl">SHOP
-                NOW</a>
-            </div>
-          </div>
+    
+    <div class="relative overflow-hidden mx-auto top-4 mb-10">
+      <div class="rounded-lg flex transition-transform duration-500" [style.transform]="'translateX(-' + (currentIndex * 100) + '%)'">
+        <div *ngFor="let slide of slides; let i = index" class="w-full flex-shrink-0 relative bg-cover bg-center h-[410px] rounded-lg" 
+             [ngStyle]="{'background-image': 'url(' + slide.image + ')'}">
+             <div *ngIf="slide.showContent"
+             class="absolute inset-0 flex items-center justify-start bg-opacity-50 text-white pl-[15%]">
+             <div class="text-left">
+               <p class="text-[4px] sm:text-[6px] md:text-[8px] lg:text-[13px] text-yellow-300 font-bold mb-5">GAME
+                 PADCONSOLE</p>
+               <p class="text-sm sm:text-lg md:text-xl lg:text-2xl font-bold">Today's Offer</p>
+               <p class="text-sm sm:text-lg md:text-xl lg:text-2xl font-bold mb-4">Skin <span
+                   class="text-green-400">Gamepad</span> 2022</p>
+               <a href="#"
+                 class="bg-white text-slate-800 font-medium px-4 py-2 rounded-3xl hover:opacity-80 text-sm sm:text-lg md:text-xl">SHOP
+                 NOW</a>
+             </div>
+           </div>
         </div>
-      <button (click)="prevSlide()" aria-label="Previous slide" class="btn-slide left-3">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-          class="size-7">
+      </div>
+    
+      <!-- Các nút điều hướng -->
+      <button (click)="prevSlide()" class="btn-slide left-3">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-7">
           <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
         </svg>
       </button>
-      <button (click)="nextSlide()" aria-label="Next slide" class="btn-slide right-3">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-          class="size-7">
+      <button (click)="nextSlide()" class="btn-slide right-3">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-7">
           <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
         </svg>
       </button>
+    
+      <!-- Chấm dưới cùng -->
       <div class="absolute bottom-2 left-0 right-0 flex justify-center space-x-2">
-        <div *ngFor="let slide of slides; let i = index" class="w-2 h-2 rounded-full cursor-pointer"
-          [ngClass]="{'bg-gray-500': currentIndex !== i, 'bg-white': currentIndex === i}" (click)="goToSlide(i)">
+        <div *ngFor="let slide of slides; let i = index" 
+             class="w-2 h-2 rounded-full cursor-pointer" 
+             [ngClass]="{'bg-gray-400': currentIndex !== i, 'bg-blue-500': currentIndex === i}"
+             (click)="goToSlide(i)">
         </div>
       </div>
-      </div>
     </div>
+    
+   
     <a href="#" class="flex items-center space-x-1 md:mt-2">
       <div *ngFor="let item of banner" class="flex w-full">
         <div class="h-[100px] sm:h-[130px] md:h-[141px] lg:h-[156px] xl:h-[191px] w-full rounded-lg overflow-hidden bg-no-repeat bg-center bg-contain 2xl:bg-cover"
