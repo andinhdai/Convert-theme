@@ -1,1 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.setDropdownTxt{
+    @apply text-gray-700 block px-4 py-2 text-sm;
+    
+}
+.toggle-dropdown-button{
+    @apply flex w-max justify-center items-center;
+   
+}

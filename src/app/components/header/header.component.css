@@ -1,0 +1,7 @@
+.header-line{
+    @apply h-px bg-gray-200 font-light w-[100vw] relative left-[calc(-50vw+50%)] mb-4;
+}
+
+.add-menu-show {
+  @apply absolute right-0 p-4 w-screen bg-white z-[1000] animate-slideDown;
+}
